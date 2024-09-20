@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumário de Seções</title>
+    <style>
+        /* Estilos do quadro (container) */
+        #summary {
+            border: 1px solid #ccc;
+            padding: 1rem;
+            width: 200px;
+            background-color: #f9f9f9;
+            position: fixed; /* Fixado à esquerda */
+            left: 0;
+            top: 10%;
+            max-height: 90vh; /* Limita a altura para evitar que saia da tela */
+            overflow-y: auto; /* Permite rolagem caso o conteúdo seja maior que a altura */
+        }
+
+        /* Estilos dos links */
+        #summary h2 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        #summary ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #summary ul li {
+            margin: 0.5rem 0;
+        }
+
+        #summary ul li a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        #summary ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="summary">
+        <h2>Seções</h2>
+        <ul>
+            <li><a href="#secao1">Seção 1</a></li>
+            <li><a href="#secao2">Seção 2</a></li>
+            <li><a href="#secao3">Seção 3</a></li>
+        </ul>
+    </div>
+
+    <div style="margin-left: 220px; padding: 1rem;">
+        <h2 id="secao1">Seção 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a facilisis ligula.</p>
+
+        <h2 id="secao2">Seção 2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+
+        <h2 id="secao3">Seção 3</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae orci vehicula.</p>
+    </div>
+
+</body>
+</html>

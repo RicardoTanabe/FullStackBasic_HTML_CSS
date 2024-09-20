@@ -1,0 +1,411 @@
+:root {
+    --main-background-color: rgb(35, 35, 35);
+    --sumary-background-color: rgb(200, 100, 100, 0.7);
+    --overlay-background-color: rgb(200, 100, 100, 0.4);
+    --selection-icon-background-color: rgb(38, 38, 38);
+    --footer-social-midia-background-color: rgb(49, 139, 212);
+    --title-text-color: rgb(200, 100, 100);
+    --topics-text-color: rgb(210, 210, 210);
+    --section-and-parag-text-color: rgb(220, 220, 220);
+    --dark-gray-style: rgb(150, 150, 150, 0.2);
+    --nav-top-bottom-color: rgb(200, 200, 200);
+    --middle-icon-text-color: rgb(150, 150, 150);
+}
+
+body {
+    /* Display dividido em três partes: Header, Main, Footer */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--main-background-color);
+}
+
+hr {
+    /* Utilizado para delimitar as fronteiras da página web */
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid var(--dark-gray-style);
+    margin: 1em 0;
+    padding: 0;
+}
+
+/* Header Elements */
+
+header{
+    /* top-header; middle-header; bottom-header*/
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 1rem 0rem 1rem;
+}
+
+header ul {
+    /* Configura todas as 'unordered list' de header */
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+}
+
+header li {
+    /* Define os de header 'list items' em linha */
+    display: inline;
+    padding: 0.5rem 1rem;
+}
+
+#top-header {
+    /* Configura os elementos no topo de header na horizontal organizando espaço
+    entre esses elementos */
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 2rem 0;
+    
+}
+
+#top-header a {
+    /* Retira o sublinhado e modifica a cor padrão dos links de header */
+    text-decoration: none;
+    color: var(--nav-top-bottom-color);
+}
+
+#top-header-nav ul li{
+    /* Define espaço entre os elementos de top-header que está a direita */
+    padding: 0 0.2rem;
+}
+
+#top-header-nav ul li:first-child{
+    /* Desabilita 'list-item' que será utilizado apenas com o media querie */
+    display: none;
+}
+
+#middle-header > h1 {
+    /* Modifica a cor do título principal da página web */
+    color: var(--title-text-color);
+}
+
+#middle-header > h4 {
+    /* Modifica a cor do subtítulo da página web */
+    color: var(--topics-text-color);
+}
+
+#bottom-header > nav > ul {
+    /* Display que contém os principais conteúdos da página web */
+    display: flex;
+    justify-content: left;
+    margin: 0.4rem 2rem;
+}
+
+#bottom-header > nav > ul > li {
+    /* Espaço entre os 'list items' disposto no menu de baixo do header */
+    padding: 0.2rem 1rem;
+}
+
+
+#bottom-header-nav {
+    /* Modifica a cor do icone 'Menu Burger'. Necessita ser modificado separadamente */
+    color: var(--middle-icon-text-color);
+}
+
+#bottom-header-nav a {
+    /* Modifica a cor dos links apresentados no menu */
+    text-decoration: none;
+    color: var(--middle-icon-text-color);
+}
+
+#bottom-header-nav > ul > li {
+    /* Existem duas ocorrências, 1º Posiciona a caixa de seleção do 'Menu Burger' alinhado
+    ao ícone e 2º insere bordas do lado direito de cada 'list item' */
+    position: relative;
+    float: left;
+    border-right: 1px solid var(--dark-gray-style);
+}
+
+.bottom-header-line {
+    /* Reajusta as margens das linhas horizontais próximas dos 'list items' dispostos no
+    menu de baixo do header */
+    margin: 0.05em 0;
+}
+
+#bottom-header-nav > ul > li > ul {
+    /* A caixa está desabilitada para ser apresentada apenas quando clicar no ícone 'Menu
+    Burger' */
+    display: none;
+    position: absolute;
+    background-color: var(--selection-icon-background-color);
+    z-index: 10;
+    text-align: justify;
+    top: 40px;
+    left: 0;
+    width: auto;
+    min-width: 150px;
+}
+
+#bottom-header-nav > ul > li > ul > li {
+    /* Organiza a caixa de seleção do 'Menu Burger' apresentada */
+    border: 1px solid var(--dark-gray-style);
+    display: block;
+    width: auto;
+}
+
+#bottom-header-toggle:checked + label + ul {
+    /* Utilizado para ativar a caixa de seleção do 'Menu Burger' */
+    display: block;
+    z-index: 10;
+}
+
+label {
+    /* Muda o formato do cursor para indicar que é um elemento selecionavel */
+    cursor: pointer;
+    display: inline-block;
+}
+
+#bottom-header-toggle {
+    /* Esconde o checkbox utilizado para expandir a caixa do 'Menu Burger' */
+    display:none
+}
+
+/* Main Elements */
+
+.main-sumary > ul {
+    /* Ajusta a caixa que contém os elementos de sumario */
+    border-radius: 3px;
+    background-color: var(--sumary-background-color);
+    text-align: left;
+    list-style-type: none;
+    margin: 2rem 5rem;
+    padding: 0.2rem;
+    max-width: 90vh;
+    overflow-x: auto;
+    width: 200px;
+}
+
+.main-sumary > ul > li{
+    /* Ajusta o título do sumario */
+    text-align: left;
+    color: var(--section-and-parag-text-color);
+    padding: 0rem 0.5rem;
+}
+
+.main-sumary > ul > ul > li {
+    /* Ajusta as seções apresentadas */
+    list-style-type: none;
+    text-align: left;
+    padding: 0.2rem 0.5rem;
+    margin: 0.2rem;
+}
+
+.main-sumary > ul > ul > li a{
+    /* Ajusta a cor das ancoras das seções */
+    text-decoration: none;
+    color: var(--section-and-parag-text-color);
+}
+
+.main-sections h2 {
+    /* Título do conteúdo da página */
+    color: var(--topics-text-color);
+}
+
+.section > h3, .section > article > p {
+    /* Ajusta as seções e seus textos */
+    text-align: justify;
+    color: var(--section-and-parag-text-color);
+    margin: 0.5rem;
+    padding: 0.25rem 2rem;
+}
+
+.main-homeContent {
+    /* Ajusta os conteúdos interativos da página home */
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-around;
+    margin: 3rem 5rem;
+    z-index: 1;
+}
+
+.main-homeContent a {
+    /* Ajusta as transições e limites do conteúdo interativos */
+    position: relative;
+    /* display: inline-block; */
+    height: 20vw;
+    width: 20vw;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.imgLogo {
+    /* Ajusta as imagens para o tamanho delimitado dos seus containers */
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.overlay {
+    /* Efeito de transição de background */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay-background-color);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.5s ease;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    color: var(--nav-top-bottom-color);
+    margin: 2rem 2rem;
+}
+
+footer ul {
+    /* Informações do rodapé */
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+}
+
+footer li {
+    /* Dispõe os 'list items' dos ul em linha */
+    display: inline;
+    padding: 0.5rem 1rem;
+}
+
+footer a {
+    /* Link para a página principal */
+    text-decoration: none;
+    color: var(--nav-top-bottom-color);
+    white-space: nowrap;
+}
+
+footer span {
+    /* Aplica efeitos ao que seriam links para redes sociais */
+    border-radius: 3px;
+    background-color: var(--footer-social-midia-background-color);
+    word-spacing: 0.2rem;
+    padding: 0.25rem 0.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Alterações visuais ao passar o mouse sobre os itens com links */
+#top-header a:hover, footer a:hover {
+    /* Apresenta os links de top-header e footer sublinhados */
+    text-decoration: underline;
+}
+
+#bottom-header-nav > ul > li > a:hover {
+    /* Produz a troca de cor e o efeito de quadrados pontilhados no bottom-header-nav */
+    color: var(--title-text-color);
+    text-decoration: none;
+    outline: 1px dotted var(--dark-gray-style);
+    outline-offset: 3px;
+    padding: 0.25rem 0rem;
+}
+
+#bottom-header-nav > ul > li> label > i:hover {
+    /* Produz a troca de cor e o efeito de quadrados pontilhados no ícone 'Menu-Burger'
+    de bottom-header-nav */
+    color: var(--title-text-color);
+    text-decoration: none;
+    outline: 1px dotted var(--dark-gray-style);
+    outline-offset: 3px;
+    padding: 0.25rem 0rem;
+}
+
+.main-homeContent > a:hover .overlay {
+    /* Escala e torna opaco a transição em cada item do main em home */
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.main-homeContent > a:hover .imgLogo {
+    /* Escala a img acompanhando a transformação do overlay */
+    transform: scale(1.2);
+}
+
+/* Acessibilidade em aparelhos menores */
+@media (max-width: 460px) {
+    #bottom-header-nav > ul > li:not(:nth-child(2)) {
+        display: none;
+    }
+}
+
+@media (max-width: 410px) {
+    /* O top-header-nav se retrai para manter a coesão com a tela */
+
+    #top-header-nav > ul > li > ul {
+        display: none;
+        position: absolute;
+        background-color: var(--selection-icon-background-color);
+        z-index: 10;
+        top: 60px;
+        right: 20px;
+        width: auto;
+        min-width: 150px;
+    }
+
+    #top-header-nav > ul > li:not(:first-child){
+        display: none;
+    }
+
+    #top-header-nav ul li:first-child{
+        display: block;
+    }
+
+    #top-header-nav > ul > li > ul > li {
+        display: block;
+        width: 100%;
+        border: 1px solid var(--dark-gray-style);
+        text-align: right;
+    }
+
+    #top-toggle:checked + label + ul {
+        display: block;
+        z-index: 10;
+    }
+    
+    label {
+        cursor: pointer;
+        display: inline-block;
+    }
+
+    #top-header-nav i {
+        color: var(--nav-top-bottom-color);
+    }
+        
+    #top-toggle {
+        display:none
+    }
+
+}
+
+@media(max-width: 600px) {
+    /* Desenvolver ajustes nos elementos visuais do main para diferentes resoluções
+    de tela */
+}
+
+@media (max-width: 748px) {
+    /* O rodapé empilha seus elementos para manter a coesão com a tela */
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--nav-top-bottom-color);
+        margin: 2rem 2rem;
+    }
+    
+    footer ul {
+        list-style-type: none;
+        margin: auto;
+        padding: 0;
+    }
+    
+    footer li {
+        display: block;
+        padding: 0.5rem 1rem;
+        margin: 0.5rem 2rem;
+    }
+}
