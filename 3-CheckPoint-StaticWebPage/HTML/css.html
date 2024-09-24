@@ -12,29 +12,43 @@
 </head>
 <body>
     <header>
-        <div id="top-header" aria-label="Menu de navegação principal">
+        <div id="top-header">
             <div>
                 <ul>
-                    <li><a href="index.html">buildstaticwebpage.dev</a></li>
+                    <li>
+                        <a href="index.html" aria-label="buildstaticwebpage.dev">buildstaticwebpage.dev</a>
+                    </li>
                 </ul>
             </div>
             <div>
                 <nav id="top-header-nav">
                     <ul>
-                        <li>
+                        <li class="top-header-nav-option">
                             <input type="checkbox" id="top-toggle">
                             <label for="top-toggle">
                                 <i class="fi fi-rr-angle-small-down"></i>
                             </label>
                             <ul>
-                                <li><a href="#">categorias</a></li>
-                                <li><a href="#">artigos</a></li>
-                                <li><a href="#">sobre</a></li>
+                                <li class="top-header-nav-hidden-option">
+                                    <a href="#" aria-label="categorias">categorias</a>
+                                </li>
+                                <li class="top-header-nav-hidden-option">
+                                    <a href="#" aria-label="artigos">artigos</a>
+                                </li>
+                                <li class="top-header-nav-hidden-option">
+                                    <a href="#" aria-label="sobre">sobre</a>
+                                </li>
                             </ul>
                         </li>
-                        <li><a href="#">categorias</a></li>
-                        <li><a href="#">artigos</a></li>
-                        <li><a href="#">sobre</a></li>
+                        <li class="top-header-nav-option">
+                            <a href="#" aria-label="categorias">categorias</a>
+                        </li>
+                        <li class="top-header-nav-option">
+                            <a href="#" aria-label="artigos">artigos</a>
+                        </li>
+                        <li class="top-header-nav-option">
+                            <a href="#" aria-label="sobre">sobre</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -46,25 +60,45 @@
     
         <div id="bottom-header">
             <hr class="bottom-header-line"/>
-            <nav id="bottom-header-nav" aria-label="Menu de navegação com os conteudos principais da página">
+            <nav id="bottom-header-nav">
                 <ul>
-                    <li><a href="#"><i class="fi fi-br-grid" aria-label="Grid view"></i></a></li>
-                    <li>
+                    <li class="bottom-header-nav-menu">
+                        <a href="#" aria-label="Grid view"><i class="fi fi-br-grid" aria-label="Grid view"></i></a>
+                    </li>
+                    <li class="bottom-header-nav-menu">
                             <input type="checkbox" id="bottom-header-toggle">
                             <label for="bottom-header-toggle">
-                            <i class="fi fi-rr-menu-burger" aria-label="Menu Burger view"></i>
+                                <i class="fi fi-rr-menu-burger" aria-label="Menu Burger view"></i>
                             </label>
                         <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="html.html">HTML</a></li>
-                            <li><a href="css.html">CSS</a></li>
-                            <li><a href="javascript.html">JavaScript</a></li>
+                            <li class="bottom-header-nav-menu-burger">
+                                <a href="index.html" aria-label="Home">Home</a>
+                            </li>
+                            <li class="bottom-header-nav-menu-burger">
+                                <a href="html.html" aria-label="HTML">HTML</a>
+                            </li>
+                            <li class="bottom-header-nav-menu-burger">
+                                <a href="css.html" aria-label="CSS">CSS</a>
+                            </li>
+                            <li class="bottom-header-nav-menu-burger">
+                                <a href="javascript.html" aria-label="JavaScript">JavaScript</a>
+                            </li>
                         </ul>
                     </li>
-                    <li><a href="index.html"><i class= "fi fi-rr-home-location-alt"></i></a></li>
-                    <li><a href="html.html">HTML</a></li>
-                    <li><a href="css.html">CSS</a></li>
-                    <li><a href="javascript.html">JavaScript</a></li>
+                    <li class="bottom-header-nav-menu">
+                        <a href="index.html" aria-label="Home view">
+                            <i class= "fi fi-rr-home-location-alt"></i>
+                        </a>
+                    </li>
+                    <li class="bottom-header-nav-menu">
+                        <a href="html.html" aria-label="HTML">HTML</a>
+                    </li>
+                    <li class="bottom-header-nav-menu">
+                        <a href="css.html" aria-label="CSS">CSS</a>
+                    </li>
+                    <li class="bottom-header-nav-menu">
+                        <a href="javascript.html" aria-label="JavaScript">JavaScript</a>
+                    </li>
                 </ul>
             </nav>
             <hr class="bottom-header-line"/>
@@ -74,26 +108,26 @@
     <main>
         <div class="main-sumary">
             <ul>
-                <li>CSS</li>
+                <li class="main-sumary-title">CSS</li>
                 <ul>
-                    <li><a href="#section1">conteudo_1</a></li>
-                    <li><a href="#section2">conteudo_2</a></li>
-                    <li><a href="#section3">conteudo_3</a></li>
+                    <li class="main-sumary-content"><a href="#section1">conteudo_1</a></li>
+                    <li class="main-sumary-content"><a href="#section2">conteudo_2</a></li>
+                    <li class="main-sumary-content"><a href="#section3">conteudo_3</a></li>
                 </ul>
             </ul>
         </div>
         <hr />
         <div class="main-sections">
             <h2>CSS</h2>
-            <section id="section1" class="section">
+            <section id="section1" class="main-sections-section">
                 <h3>conteudo_1</h3>
-                <article>
+                <article class="main-sections-article">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum tempora eos cumque! Excepturi veniam eligendi neque placeat! Quibusdam accusantium eius praesentium animi, aspernatur culpa, doloribus eligendi porro odit, deserunt aperiam.</p>
                 </article>
             </section>
-            <section id="section2" class="section">
+            <section id="section2" class="main-sections-section">
                 <h3>conteudo_2</h3>
-                <article>
+                <article class="main-sections-article">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum tempora eos cumque! Excepturi veniam eligendi neque placeat! Quibusdam accusantium eius praesentium animi, aspernatur culpa, doloribus eligendi porro odit, deserunt aperiam.</p>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum tempora eos cumque! Excepturi veniam eligendi neque placeat! Quibusdam accusantium eius praesentium animi, aspernatur culpa, doloribus eligendi porro odit, deserunt aperiam.
@@ -113,9 +147,9 @@
                     </p>
                 </article>
             </section>
-            <section id="section3" class="section">
+            <section id="section3" class="main-sections-section">
                 <h3>conteudo_3</h3>
-                <article>
+                <article class="main-sections-article">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum tempora eos cumque! Excepturi veniam eligendi neque placeat! Quibusdam accusantium eius praesentium animi, aspernatur culpa, doloribus eligendi porro odit, deserunt aperiam.
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum tempora eos cumque! Excepturi veniam eligendi neque placeat! Quibusdam accusantium eius praesentium animi, aspernatur culpa, doloribus eligendi porro odit, deserunt aperiam.
